@@ -5,15 +5,19 @@ public class SumatorioPotencias {
 		Scanner teclado = new Scanner (System.in);		//TECLADO
 		int n = teclado.nextInt();		//ALMACENA NÚMERO EN N
 		double suma =0;		//SUMATORIO
-		double valor;		//VALOR A SUMAR AL SUMATORIO
+		
 		
 		for (double i=1;i<=n;i++) {		//BUCLE - REPETIR N VECES
-			valor = Math.pow(i, i);		//HALLAR VALOR
+			double valor=1;		//VALOR A SUMAR AL SUMATORIO
+			for (int a=1;a<=i;a++) {		//BUCLE - POTENCIA
+				valor = valor * i;		//POTENCIA
+			}
 			suma = suma + valor;		//ACTUALIZAR SUMATORIO
+
 			
 		}
 				//OUTPUT
-		System.out.printf("El sumatorio de las potencias es %d.",suma);
+		System.out.printf("El sumatorio de las potencias es %f.",suma);
 	}
 
 }
